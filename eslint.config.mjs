@@ -6,6 +6,7 @@ import prettier from 'eslint-config-prettier'
 import importPlugin from 'eslint-plugin-import'
 import tailwind from 'eslint-plugin-tailwindcss'
 import perfectionist from 'eslint-plugin-perfectionist'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
 import unusedImports from 'eslint-plugin-unused-imports'
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -20,8 +21,19 @@ export default [
       'unused-imports': unusedImports,
       perfectionist,
       'jsx-a11y': jsxA11y,
+      'react-hooks': pluginReactHooks,
     },
     rules: {
+      camelcase: 1,
+      'no-alert': 0,
+      'no-console': 0,
+      'no-unused-vars': 0,
+      'no-nested-ternary': 0,
+      'no-param-reassign': 0,
+      'no-underscore-dangle': 0,
+      'no-use-before-define': 0,
+      'no-restricted-exports': 0,
+      'no-promise-executor-return': 0,
       // React
       'react/prop-types': 0,
       'react/no-children-prop': 0,
@@ -34,14 +46,13 @@ export default [
       'react/jsx-no-useless-fragment': [1, { allowExpressions: true }],
       'react/no-unstable-nested-components': [1, { allowAsProps: true }],
       // import
-      'import/no-dynamic-require': 0,
-      'import/no-nodejs-modules': 0,
+      'import/named': 0,
+      'import/default': 0,
       'import/no-duplicates': 0,
       'import/no-unresolved': 0,
-      'import/default': 0,
-      'import/named': 0,
+      'import/no-nodejs-modules': 0,
+      'import/no-dynamic-require': 0,
       // unused imports
-      'no-unused-vars': 1,
       'unused-imports/no-unused-imports': 1,
       'unused-imports/no-unused-vars': [
         1,
