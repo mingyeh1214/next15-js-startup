@@ -24,7 +24,7 @@ export default [
       'react-hooks': pluginReactHooks,
     },
     rules: {
-      camelcase: 1,
+      camelcase: [1, { properties: 'always' }],
       'no-alert': 0,
       'no-console': 0,
       'no-unused-vars': 0,
@@ -36,14 +36,15 @@ export default [
       'no-promise-executor-return': 0,
       // React
       'react/prop-types': 0,
+      'react/jsx-pascal-case': [1, { allowAllCaps: true, ignore: [] }],
       'react/no-children-prop': 0,
       'react/react-in-jsx-scope': 0,
       'react/no-array-index-key': 0,
       'react/require-default-props': 0,
       'react/jsx-props-no-spreading': 0,
-      'react/function-component-definition': 0,
       'react/jsx-no-duplicate-props': [1, { ignoreCase: false }],
       'react/jsx-no-useless-fragment': [1, { allowExpressions: true }],
+      'react/function-component-definition': 0,
       'react/no-unstable-nested-components': [1, { allowAsProps: true }],
       // import
       'import/named': 0,
