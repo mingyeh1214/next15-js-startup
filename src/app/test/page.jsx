@@ -3,6 +3,7 @@ import { FlipWords } from '@/components/aceternity-ui/flip-words'
 import { RainbowButton } from '@/components/magic-ui/rainbow-button'
 
 import { Stack, Container, Button as MuiButton } from '@mui/material'
+
 export default function Test() {
   const words = ['better', 'cute', 'beautiful', 'modern']
 
